@@ -1,16 +1,4 @@
-# Python 工匠：写好面向对象代码的原则（中）
-
-## 前言
-
-> 这是 “Python 工匠”系列的第 13 篇文章。[[查看系列所有文章]](https://github.com/piglei/one-python-craftsman)
-
-<div style="text-align: center; color: #999; margin: 14px 0 14px;font-size: 12px;">
-<img src="https://www.zlovezl.cn/static/uploaded/2019/11/neonbrand-CXDw96Oy-Yw-unsplash_w1280.jpg" width="100%" />
-</div>
-
-在 [上一篇文章](https://www.zlovezl.cn/articles/write-solid-python-codes-part-1/) 里，我用一个虚拟小项目作为例子，讲解了“SOLID”设计原则中的前两位成员：S*（单一职责原则）*与 O*（开放-关闭原则）*。
-
-在这篇文章中，我将继续介绍 SOLID 原则的第三位成员：**L（里氏替换原则）**。
+# 写好面向对象代码的原则（中）
 
 ## 里氏替换原则与继承
 
@@ -335,22 +323,7 @@ class Admin(User):
 - 子类方法应该和父类同名方法返回同一类型，或者返回支持更多操作的子类型也行
 - 子类的方法参数应该和父类同名方法完全一致，或者更为宽松
 
-看完文章的你，有没有什么想吐槽的？请留言或者在 [项目 Github Issues](https://github.com/piglei/one-python-craftsman) 告诉我吧。
-
-[>>>下一篇【14.写好面向对象代码的原则（下）】](14-write-solid-python-codes-part-3.md)
-
-[<<<上一篇【12.写好面向对象代码的原则（上）】](12-write-solid-python-codes-part-1.md)
-
 ## 附录
 
 - 题图来源: Photo by NeONBRAND on Unsplash
 - 更多系列文章地址：https://github.com/piglei/one-python-craftsman
-
-系列其他文章：
-
-- [所有文章索引 [Github]](https://github.com/piglei/one-python-craftsman)
-- [Python 工匠：写好面向对象代码的原则（上）](https://www.zlovezl.cn/articles/write-solid-python-codes-part-1/)
-- [Python 工匠：编写地道循环的两个建议](https://www.zlovezl.cn/articles/two-tips-on-loop-writing/)
-- [Python 工匠：高效操作文件的三个建议](https://www.zlovezl.cn/articles/three-tips-on-writing-file-related-codes/)
-
-
