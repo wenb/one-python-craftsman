@@ -126,14 +126,14 @@ if __name__ == '__main__':
 Sunny软件公司开发人员在初期的CRM系统设计中，考虑到客户数量不多，系统采用MySQL作为数据库，  
 与数据库操作有关的类如CustomerDAO类等都需要连接数据库，连接数据库的方法getConnection()封装在DBUtil类中，  
 由于需要重用DBUtil类的getConnection()方法，设计人员将CustomerDAO作为DBUtil类的子类，初始设计方案结构如图1所示：  
-<img alt="" src="https://img-my.csdn.net/uploads/201205/14/1336930023_1487.jpg" width="346" height="280" style="width:342px; height:253px">
+![图1](https://raw.githubusercontent.com/wenb/one-python-craftsman/master/img/dao1.jpg)
 
 ## 改造方法
 在图2中，CustomerDAO和DBUtil之间的关系由继承关系变为关联关系，采用依赖注入的方式将DBUtil对象注入到CustomerDAO中，可以使用构造注入，  
 也可以使用Setter注入。如果需要对DBUtil的功能进行扩展，可以通过其子类来实现，如通过子类OracleDBUtil来连接Oracle数据库。  
 由于CustomerDAO针对DBUtil编程，根据里氏代换原则，DBUtil子类的对象可以覆盖DBUtil对象，只需在CustomerDAO中注入子类对象即可使用子类所扩展的方法。  
 例如在CustomerDAO中注入OracleDBUtil对象，即可实现Oracle数据库连接，原有代码无须进行修改，而且还可以很灵活地增加新的数据库连接方式。  
-<img alt="" src="https://img-my.csdn.net/uploads/201205/14/1336930028_3039.jpg" width="510" height="252" style="width:509px; height:226px">
+![图2](https://raw.githubusercontent.com/wenb/one-python-craftsman/master/img/dao2.jpg)
   
 
 ## 总结
